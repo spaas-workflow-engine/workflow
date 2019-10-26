@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.deepexi.workflow.engine</groupId>
+    <groupId>com.workflow.engine</groupId>
     <artifactId>workflow-engine</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
