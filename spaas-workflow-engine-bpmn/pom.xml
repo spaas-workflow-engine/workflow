@@ -12,5 +12,17 @@
     <artifactId>spaas-workflow-engine-bpmn</artifactId>
     <description>流程引擎BPMN处理层</description>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.tinyjee.jgraphx</groupId>
+            <artifactId>jgraphx</artifactId>
+            <version>1.10.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.workflow.engine</groupId>
+            <artifactId>spaas-workflow-engine-utils</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

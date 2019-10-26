@@ -22,7 +22,7 @@
         <module>spaas-workflow-engine-api</module>
         <module>spaas-workflow-engine-form</module>
         <module>spaas-workflow-engine</module>
-        <module>spaas-workflow-engine-utils</module>
+        <module>spaas-workflow-engine-common</module>
         <module>spaas-workflow-engine-provider</module>
     </modules>
 
@@ -55,6 +55,17 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.1-jre</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

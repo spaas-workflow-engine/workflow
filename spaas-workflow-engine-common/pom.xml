@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spaas-workflow-engine-utils</artifactId>
+    <artifactId>spaas-workflow-engine-common</artifactId>
     <description>流程引擎工具</description>
 
 
