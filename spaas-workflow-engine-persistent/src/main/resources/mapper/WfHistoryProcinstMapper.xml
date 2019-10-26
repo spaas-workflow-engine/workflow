@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workflow.engine.mapper.WfHistoryProcinstMapper">
+    <resultMap type="com.workflow.engine.domain.eo.WfHistoryProcinst" id="WfHistoryProcinstDtoResult">
+        <result property="id" column="id" />
+        <result property="rev" column="rev" />
+        <result property="procInstId" column="proc_inst_id" />
+        <result property="businessKey" column="business_key" />
+        <result property="procDefId" column="proc_def_id" />
+        <result property="startTime" column="start_time" />
+        <result property="endTime" column="end_time" />
+        <result property="duration" column="duration" />
+        <result property="startUserId" column="start_user_id" />
+        <result property="startActId" column="start_act_id" />
+        <result property="endActId" column="end_act_id" />
+        <result property="superProcessInstanceId" column="super_process_instance_id" />
+        <result property="deleteReason" column="delete_reason" />
+        <result property="tenantId" column="tenant_id" />
+        <result property="name" column="name" />
+        <result property="callbackId" column="callback_id" />
+        <result property="callbackType" column="callback_type" />
+    </resultMap>
+    <select id="findList" resultType="com.workflow.engine.domain.eo.WfHistoryProcinst">
+        SELECT * FROM wf_history_procinst WHERE 1=1
+    </select>
+
+    <update id="deleteByIds">
+        UPDATE wf_history_procinst set dr=1 where id in
+        <foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>
