@@ -20,10 +20,13 @@ import com.workflow.engine.model.TaskWithFieldExtensions;
 import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ProcessLevelValidator;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
 
+
+@Component
 public abstract class ExternalInvocationTaskValidator extends ProcessLevelValidator {
 
     protected void validateFieldDeclarationsForEmail(Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {

@@ -19,13 +19,12 @@ import com.workflow.engine.model.ScriptTask;
 import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ProcessLevelValidator;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
 
-/**
- * @author jbarrez
- */
+@Component
 public class ScriptTaskValidator extends ProcessLevelValidator {
 
     @Override

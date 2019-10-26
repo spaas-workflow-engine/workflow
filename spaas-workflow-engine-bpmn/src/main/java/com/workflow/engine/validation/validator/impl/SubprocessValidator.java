@@ -21,12 +21,11 @@ import com.workflow.engine.model.SubProcess;
 import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ProcessLevelValidator;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * @author jbarrez
- */
+@Component
 public class SubprocessValidator extends ProcessLevelValidator {
 
     @Override

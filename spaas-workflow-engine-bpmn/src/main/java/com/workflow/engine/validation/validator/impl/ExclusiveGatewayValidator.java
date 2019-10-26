@@ -21,13 +21,12 @@ import com.workflow.engine.model.SequenceFlow;
 import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ProcessLevelValidator;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author jbarrez
- */
+@Component
 public class ExclusiveGatewayValidator extends ProcessLevelValidator {
 
     @Override

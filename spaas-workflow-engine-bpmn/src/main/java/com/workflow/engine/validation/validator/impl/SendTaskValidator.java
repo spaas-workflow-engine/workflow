@@ -18,12 +18,11 @@ import com.workflow.engine.model.*;
 import com.workflow.engine.model.Process;
 import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Problems;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * @author jbarrez
- */
+@Component
 public class SendTaskValidator extends ExternalInvocationTaskValidator {
 
     @Override

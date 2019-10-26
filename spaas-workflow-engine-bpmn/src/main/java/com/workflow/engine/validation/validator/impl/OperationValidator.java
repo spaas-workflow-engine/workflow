@@ -19,12 +19,11 @@ import com.workflow.engine.model.Operation;
 import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ValidatorImpl;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * @author jbarrez
- */
+@Component
 public class OperationValidator extends ValidatorImpl {
 
     @Override

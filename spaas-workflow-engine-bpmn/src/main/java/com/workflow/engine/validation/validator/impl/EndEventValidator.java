@@ -18,12 +18,11 @@ import com.workflow.engine.model.Process;
 import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ProcessLevelValidator;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * @author jbarrez
- */
+@Component
 public class EndEventValidator extends ProcessLevelValidator {
 
     @Override

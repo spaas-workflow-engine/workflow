@@ -19,12 +19,12 @@ import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ProcessLevelValidator;
 
 import com.workflow.engine.model.Process;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Joram Barrez
- */
+@Component
 public class StartEventValidator extends ProcessLevelValidator {
 
     @Override

@@ -20,14 +20,13 @@ import com.workflow.engine.model.Process;
 import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ValidatorImpl;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.util.Collection;
 import java.util.List;
 
-/**
- * @author jbarrez
- */
+@Component
 public class AssociationValidator extends ValidatorImpl {
 
     @Override

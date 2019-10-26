@@ -17,17 +17,13 @@ import com.workflow.engine.model.*;
 import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ProcessLevelValidator;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import  com.workflow.engine.model.Process;
 import java.util.List;
 
-/**
- * A validator for stuff that is shared across all flow elements
- * 
- * @author jbarrez
- * @author Erik Winlof
- */
+@Component
 public class FlowElementValidator extends ProcessLevelValidator {
 
     protected static final int ID_MAX_LENGTH = 255;

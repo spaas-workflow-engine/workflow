@@ -42,20 +42,21 @@ public class ValidatorSet {
     }
 
     public void setValidators(Collection<? extends Validator> validators) {
-        for (Validator validator : validators) {
-            addValidator(validator);
+        if(null == validators){
+            this.validators = new HashMap<>();
         }
+        this.validators =(Map<Class<? extends Validator>, Validator>)validators;
     }
 
     public void removeValidator(Class<? extends Validator> validatorClass) {
         validators.remove(validatorClass);
     }
 
-    public void addValidator(Validator validator) {
+    public void addValidator(Map<Class<? extends Validator>, Validator> validator) {
         if (validators == null) {
             validators = new HashMap<>();
         }
-        validators.put(validator.getClass(), validator);
+        validators.putAll(validator);
     }
 
 }

@@ -19,13 +19,12 @@ import com.workflow.engine.validation.ValidationError;
 import com.workflow.engine.validation.validator.Constraints;
 import com.workflow.engine.validation.validator.Problems;
 import com.workflow.engine.validation.validator.ValidatorImpl;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * @author jbarrez
- * @author Erik Winlof
- */
+
+@Component
 public class BpmnModelValidator extends ValidatorImpl {
 
     @Override
