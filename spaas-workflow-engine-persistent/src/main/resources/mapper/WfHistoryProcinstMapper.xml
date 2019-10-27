@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.workflow.engine.mapper.WfHistoryProcinstMapper">
-    <resultMap type="com.workflow.engine.domain.eo.WfHistoryProcinst" id="WfHistoryProcinstDtoResult">
+<mapper namespace="com.workflow.engine.process.mapper.WfHistoryProcinstMapper">
+    <resultMap type="com.workflow.engine.process.domain.eo.WfHistoryProcinst" id="WfHistoryProcinstDtoResult">
         <result property="id" column="id" />
         <result property="rev" column="rev" />
         <result property="procInstId" column="proc_inst_id" />
@@ -20,7 +20,7 @@
         <result property="callbackId" column="callback_id" />
         <result property="callbackType" column="callback_type" />
     </resultMap>
-    <select id="findList" resultType="com.workflow.engine.domain.eo.WfHistoryProcinst">
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfHistoryProcinst">
         SELECT * FROM wf_history_procinst WHERE 1=1
     </select>
 

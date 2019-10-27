@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.workflow.engine.mapper.WfHistoryCommentMapper">
-    <resultMap type="com.workflow.engine.domain.eo.WfHistoryComment" id="WfHistoryCommentDtoResult">
+<mapper namespace="com.workflow.engine.process.mapper.WfHistoryCommentMapper">
+    <resultMap type="com.workflow.engine.process.domain.eo.WfHistoryComment" id="WfHistoryCommentDtoResult">
         <result property="id" column="id" />
         <result property="type" column="type" />
         <result property="time" column="time" />
@@ -13,7 +13,7 @@
         <result property="fullMsg" column="full_msg" />
         <result property="tenantId" column="tenant_id" />
     </resultMap>
-    <select id="findList" resultType="com.workflow.engine.domain.eo.WfHistoryComment">
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfHistoryComment">
         SELECT * FROM wf_history_comment WHERE 1=1
     </select>
 

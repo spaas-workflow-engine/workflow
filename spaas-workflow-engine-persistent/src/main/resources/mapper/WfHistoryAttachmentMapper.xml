@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.workflow.engine.mapper.WfHistoryAttachmentMapper">
-    <resultMap type="com.workflow.engine.domain.eo.WfHistoryAttachment" id="WfHistoryAttachmentDtoResult">
+<mapper namespace="com.workflow.engine.process.mapper.WfHistoryAttachmentMapper">
+    <resultMap type="com.workflow.engine.process.domain.eo.WfHistoryAttachment" id="WfHistoryAttachmentDtoResult">
         <result property="id" column="id" />
         <result property="rev" column="rev" />
         <result property="userId" column="user_id" />
@@ -15,7 +15,7 @@
         <result property="time" column="time" />
         <result property="tenantId" column="tenant_id" />
     </resultMap>
-    <select id="findList" resultType="com.workflow.engine.domain.eo.WfHistoryAttachment">
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfHistoryAttachment">
         SELECT * FROM wf_history_attachment WHERE 1=1
     </select>
 

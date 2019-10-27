@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.workflow.engine.mapper.WfHistoryActinstMapper">
-    <resultMap type="com.workflow.engine.domain.eo.WfHistoryActinst" id="WfHistoryActinstDtoResult">
+<mapper namespace="com.workflow.engine.process.mapper.WfHistoryActinstMapper">
+    <resultMap type="com.workflow.engine.process.domain.eo.WfHistoryActinst" id="WfHistoryActinstDtoResult">
         <result property="id" column="id" />
         <result property="rev" column="rev" />
         <result property="procDefId" column="proc_def_id" />
@@ -19,7 +19,7 @@
         <result property="deleteReason" column="delete_reason" />
         <result property="tenantId" column="tenant_id" />
     </resultMap>
-    <select id="findList" resultType="com.workflow.engine.domain.eo.WfHistoryActinst">
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfHistoryActinst">
         SELECT * FROM wf_history_actinst WHERE 1=1
     </select>
 
