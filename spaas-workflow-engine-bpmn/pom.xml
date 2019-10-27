@@ -20,7 +20,7 @@
         </dependency>
         <dependency>
             <groupId>com.workflow.engine</groupId>
-            <artifactId>spaas-workflow-engine-utils</artifactId>
+            <artifactId>spaas-workflow-engine-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
