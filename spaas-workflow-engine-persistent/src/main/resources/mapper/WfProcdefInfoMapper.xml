@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workflow.engine.process.mapper.WfProcdefInfoMapper">
+    <resultMap type="com.workflow.engine.process.domain.eo.WfProcdefInfo" id="WfProcdefInfoDtoResult">
+        <result property="id" column="id" />
+        <result property="procDefId" column="proc_def_id" />
+        <result property="rev" column="rev" />
+        <result property="infoJsonId" column="info_json_id" />
+    </resultMap>
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfProcdefInfo">
+        SELECT * FROM wf_procdef_info WHERE 1=1
+    </select>
+
+    <update id="deleteByIds">
+        UPDATE wf_procdef_info set dr=1 where id in
+        <foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>

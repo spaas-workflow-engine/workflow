@@ -40,8 +40,8 @@ public class WfRuntimeExecutionVO {
     private Integer  idLinkCount;
     private String callbackId;
     private String callbackType;
-    private Integer  id;
+    private Long  id;
     private Integer  rev;
-    private Integer  procInstId;
+    private Long  procInstId;
 }
 

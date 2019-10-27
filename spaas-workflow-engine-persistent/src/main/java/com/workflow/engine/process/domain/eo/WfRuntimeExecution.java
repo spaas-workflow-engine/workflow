@@ -1,15 +1,13 @@
 package com.workflow.engine.process.domain.eo;
 
 
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.EnumValue;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
-import java.util.Collection;
+import java.util.Date;
 //import io.swagger.annotations.ApiModel;
 //import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +25,7 @@ public class WfRuntimeExecution{
     @TableField(value = "`parent_id`")
     private Integer  parentId;
     @TableField(value = "`proc_def_id`")
-    private String procDefId;
+    private Long procDefId;
     @TableField(value = "`super_exec`")
     private String superExec;
     @TableField(value = "`root_proc_inst_id`")
@@ -86,11 +84,11 @@ public class WfRuntimeExecution{
     private String callbackType;
     @TableId
     @TableField(value = "`id`")
-    private Integer  id;
+    private Long  id;
     @TableField(value = "`rev`")
     private Integer  rev;
     @TableField(value = "`proc_inst_id`")
-    private Integer  procInstId;
+    private Long  procInstId;
 
 }
 

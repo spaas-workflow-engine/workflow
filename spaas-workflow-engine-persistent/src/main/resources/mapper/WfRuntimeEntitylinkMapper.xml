@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workflow.engine.process.mapper.WfRuntimeEntitylinkMapper">
+    <resultMap type="com.workflow.engine.process.domain.dto.WfRuntimeEntitylinkDTO" id="WfRuntimeEntitylinkDtoResult">
+        <result property="id" column="id" />
+        <result property="rev" column="rev" />
+        <result property="createTime" column="create_time" />
+        <result property="linkType" column="link_type" />
+        <result property="scopeId" column="scope_id" />
+        <result property="scopeType" column="scope_type" />
+        <result property="scopeDefinitionId" column="scope_definition_id" />
+        <result property="refScopeId" column="ref_scope_id" />
+        <result property="refScopeType" column="ref_scope_type" />
+        <result property="refScopeDefinitionId" column="ref_scope_definition_id" />
+        <result property="hierarchyType" column="hierarchy_type" />
+    </resultMap>
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfRuntimeEntitylink">
+        SELECT * FROM wf_runtime_entitylink WHERE 1=1
+    </select>
+
+    <update id="deleteByIds">
+        UPDATE wf_runtime_entitylink set dr=1 where id in
+        <foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>

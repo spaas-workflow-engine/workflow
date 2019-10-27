@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workflow.engine.process.mapper.WfRepositoryDeploymentMapper">
+    <resultMap type="com.workflow.engine.process.domain.eo.WfRepositoryDeployment" id="WfrepositoryDeploymentDtoResult">
+        <result property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="category" column="category" />
+        <result property="code" column="code" />
+        <result property="tenantId" column="tenant_id" />
+        <result property="deployTime" column="deploy_time" />
+        <result property="derivedFrom" column="derived_from" />
+        <result property="derivedFromRoot" column="derived_from_root" />
+        <result property="parentDeploymentId" column="parent_deployment_id" />
+        <result property="engineVersion" column="engine_version" />
+    </resultMap>
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfRepositoryDeployment">
+        SELECT * FROM wf_repository_deployment WHERE 1=1
+    </select>
+
+    <update id="deleteByIds">
+        UPDATE wf_repository_deployment set dr=1 where id in
+        <foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>

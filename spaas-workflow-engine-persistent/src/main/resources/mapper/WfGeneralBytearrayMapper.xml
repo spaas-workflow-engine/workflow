@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workflow.engine.process.mapper.WfGeneralBytearrayMapper">
+    <resultMap type="com.workflow.engine.process.domain.eo.WfGeneralBytearray" id="WfGeneralBytearrayDtoResult">
+        <result property="id" column="id" />
+        <result property="rev" column="rev" />
+        <result property="name" column="name" />
+        <result property="deploymentId" column="deployment_id" />
+        <result property="bytes" column="bytes" />
+        <result property="prototype" column="prototype" />
+    </resultMap>
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfGeneralBytearray">
+        SELECT * FROM wf_general_bytearray WHERE 1=1
+    </select>
+
+    <update id="deleteByIds">
+        UPDATE wf_general_bytearray set dr=1 where id in
+        <foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>

@@ -11,12 +11,12 @@ import java.util.Date;
 @Data
 public class WfRuntimeTaskVO {
 
-    private Integer  id;
+    private Long  id;
     private Integer  rev;
-    private Integer  executionId;
-    private Integer  procInstId;
-    private Integer  procDefId;
-    private Integer  taskDefId;
+    private Long  executionId;
+    private Long  procInstId;
+    private Long  procDefId;
+    private Long  taskDefId;
     private String scopeId;
     private String subScopeId;
     private String scopeType;

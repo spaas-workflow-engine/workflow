@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workflow.engine.process.mapper.WfRuntimeSuspendedJobMapper">
+    <resultMap type="com.workflow.engine.process.domain.dto.WfRuntimeSuspendedJobDTO" id="WfRuntimeSuspendedJobDtoResult">
+        <result property="id" column="id" />
+        <result property="rev" column="rev" />
+        <result property="type" column="type" />
+        <result property="exclusive" column="exclusive" />
+        <result property="executionId" column="execution_id" />
+        <result property="processInstanceId" column="process_instance_id" />
+        <result property="procDefId" column="proc_def_id" />
+        <result property="elementId" column="element_id" />
+        <result property="elementName" column="element_name" />
+        <result property="scopeId" column="scope_id" />
+        <result property="subScopeId" column="sub_scope_id" />
+        <result property="scopeType" column="scope_type" />
+        <result property="scopeDefinitionId" column="scope_definition_id" />
+        <result property="retries" column="retries" />
+        <result property="exceptionStackId" column="exception_stack_id" />
+        <result property="exceptionMsg" column="exception_msg" />
+        <result property="duedate" column="duedate" />
+        <result property="duplicate" column="duplicate" />
+        <result property="handlerType" column="handler_type" />
+        <result property="handlerCfg" column="handler_cfg" />
+        <result property="customValuesId" column="custom_values_id" />
+        <result property="createTime" column="create_time" />
+        <result property="tenantId" column="tenant_id" />
+    </resultMap>
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfRuntimeSuspendedJob">
+        SELECT * FROM wf_runtime_suspended_job WHERE 1=1
+    </select>
+
+    <update id="deleteByIds">
+        UPDATE wf_runtime_suspended_job set dr=1 where id in
+        <foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>

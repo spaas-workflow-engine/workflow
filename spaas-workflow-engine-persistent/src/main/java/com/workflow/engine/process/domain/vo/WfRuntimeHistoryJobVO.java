@@ -12,7 +12,7 @@ import java.util.Date;
 @Data
 public class WfRuntimeHistoryJobVO {
 
-    private Integer  id;
+    private Long  id;
     private Integer  rev;
     private Date lockExpTime;
     private String lockOwner;

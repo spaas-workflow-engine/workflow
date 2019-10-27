@@ -1,15 +1,10 @@
 package com.workflow.engine.process.domain.eo;
 
 
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.EnumValue;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
-
-import java.util.Collection;
 //import io.swagger.annotations.ApiModel;
 //import io.swagger.annotations.ApiModelProperty;
 
@@ -24,7 +19,7 @@ public class WfRuntimeVariable{
 
     @TableId
     @TableField(value = "`id`")
-    private Integer  id;
+    private Long  id;
     @TableField(value = "`rev`")
     private Integer  rev;
     @TableField(value = "`type`")
@@ -32,11 +27,11 @@ public class WfRuntimeVariable{
     @TableField(value = "`name`")
     private String name;
     @TableField(value = "`execution_id`")
-    private Integer  executionId;
+    private Long  executionId;
     @TableField(value = "`proc_inst_id`")
-    private Integer  procInstId;
+    private Long  procInstId;
     @TableField(value = "`task_id`")
-    private Integer  taskId;
+    private Long  taskId;
     @TableField(value = "`scope_id`")
     private String scopeId;
     @TableField(value = "`sub_scope_id`")
