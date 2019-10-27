@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workflow.engine.process.mapper.WfRuntimeExecutionMapper">
+    <resultMap type="com.workflow.engine.process.domain.eo.WfRuntimeExecution" id="WfRuntimeExecutionDtoResult">
+        <result property="businessKey" column="business_key" />
+        <result property="parentId" column="parent_id" />
+        <result property="procDefId" column="proc_def_id" />
+        <result property="superExec" column="super_exec" />
+        <result property="rootProcInstId" column="root_proc_inst_id" />
+        <result property="wfId" column="wf_id" />
+        <result property="isWfive" column="is_wfive" />
+        <result property="isConcurrent" column="is_concurrent" />
+        <result property="isScope" column="is_scope" />
+        <result property="isEventScope" column="is_event_scope" />
+        <result property="isMiRoot" column="is_mi_root" />
+        <result property="suspensionState" column="suspension_state" />
+        <result property="cachedEntState" column="cached_ent_state" />
+        <result property="tenantId" column="tenant_id" />
+        <result property="name" column="name" />
+        <result property="startWfId" column="start_wf_id" />
+        <result property="startTime" column="start_time" />
+        <result property="startUserId" column="start_user_id" />
+        <result property="lockTime" column="lock_time" />
+        <result property="isCountEnabled" column="is_count_enabled" />
+        <result property="evtSubscrCount" column="evt_subscr_count" />
+        <result property="taskCount" column="task_count" />
+        <result property="jobCount" column="job_count" />
+        <result property="timerJobCount" column="timer_job_count" />
+        <result property="suspJobCount" column="susp_job_count" />
+        <result property="deadletterJobCount" column="deadletter_job_count" />
+        <result property="varCount" column="var_count" />
+        <result property="idLinkCount" column="id_link_count" />
+        <result property="callbackId" column="callback_id" />
+        <result property="callbackType" column="callback_type" />
+        <result property="id" column="id" />
+        <result property="rev" column="rev" />
+        <result property="procInstId" column="proc_inst_id" />
+    </resultMap>
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfRuntimeExecution">
+        SELECT * FROM wf_runtime_execution WHERE 1=1
+    </select>
+
+    <update id="deleteByIds">
+        UPDATE wf_runtime_execution set dr=1 where id in
+        <foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>

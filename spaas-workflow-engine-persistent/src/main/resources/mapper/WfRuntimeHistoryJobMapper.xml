@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workflow.engine.process.mapper.WfRuntimeHistoryJobMapper">
+    <resultMap type="com.workflow.engine.process.domain.eo.WfRuntimeHistoryJob" id="WfRuntimeHistoryJobDtoResult">
+        <result property="id" column="id" />
+        <result property="rev" column="rev" />
+        <result property="lockExpTime" column="lock_exp_time" />
+        <result property="lockOwner" column="lock_owner" />
+        <result property="retries" column="retries" />
+        <result property="exceptionStackId" column="exception_stack_id" />
+        <result property="exceptionMsg" column="exception_msg" />
+        <result property="handlerType" column="handler_type" />
+        <result property="handlerCfg" column="handler_cfg" />
+        <result property="customValuesId" column="custom_values_id" />
+        <result property="advHandlerCfgId" column="adv_handler_cfg_id" />
+        <result property="createTime" column="create_time" />
+        <result property="scopeType" column="scope_type" />
+        <result property="tenantId" column="tenant_id" />
+    </resultMap>
+    <select id="findList" resultType="com.workflow.engine.process.domain.eo.WfRuntimeHistoryJob">
+        SELECT * FROM wf_runtime_history_job WHERE 1=1
+    </select>
+
+    <update id="deleteByIds">
+        UPDATE wf_runtime_history_job set dr=1 where id in
+        <foreach collection="ids" index="index" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>
